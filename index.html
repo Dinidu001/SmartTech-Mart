@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTech Mart - Sri Lanka's Premium Electronics Store</title>
+    <meta name="description" content="Shop the latest phones, gadgets, and accessories at SmartTech Mart. Best prices in Sri Lanka. Fast delivery and secure payments.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Notification Toast -->
+    <div id="toast" class="toast hidden">Item added to cart!</div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo" onclick="navigateTo('home')">
+                <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                SmartTech<span class="highlight">Mart</span>
+            </a>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for products, brands and more">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#cart" class="nav-item cart-icon" onclick="navigateTo('cart')">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+                <a href="#login" class="nav-item login-btn" onclick="navigateTo('login')">
+                    <i class="fas fa-user"></i> Login
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="categories-bar">
+            <div class="container">
+                <a href="#" onclick="filterCategory('all')">All Categories</a>
+                <a href="#" onclick="filterCategory('phones')">Smartphones</a>
+                <a href="#" onclick="filterCategory('laptops')">Laptops</a>
+                <a href="#" onclick="filterCategory('audio')">Audio</a>
+                <a href="#" onclick="filterCategory('wearables')">Wearables</a>
+                <a href="#" onclick="filterCategory('accessories')">Accessories</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main id="app">
+        <!-- Views will be injected here by JavaScript -->
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>About SmartTech Mart</h3>
+                <p>Sri Lanka's premier destination for the latest tech gadgets and electronics. Quality products, best prices.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop All</a></li>
+                    <li><a href="#track">Track Order</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Colombo 03, Sri Lanka</p>
+                <p><i class="fas fa-phone"></i> +94 77 123 4567</p>
+                <p><i class="fas fa-envelope"></i> support@smarttechmart.lk</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SmartTech Mart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Firebase SDKs (Compat for simplicity in vanilla JS without modules) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-storage-compat.js"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>
